@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run: npm install
       - run: npm run build
-      - aws-s3/copy:
+      - aws-s3/sync:
           from: build
           to: 's3://bhavika-food-delivery-app/'
 workflows:
