@@ -2,8 +2,6 @@ name: Share data between jobs
 
 on: 
   push:
-  pull_request:
-  workflow_dispatch:
 jobs:
   job_1:
     name: Add 3 and 7
@@ -17,7 +15,7 @@ jobs:
         with:
           name: homework
           path: math-homework.txt
-      - name: Download math result for job 1
-        uses: actions/download-artifact@v3
-        with:
-          name: homework
+      - name: commmit files
+        run: |
+          git commit -m "added file" -a
+          git push
