@@ -1,6 +1,8 @@
 name: Share data between jobs
 
 on: [push]
+pull-request:
+workflow_dispatch:
 
 jobs:
   job_1:
