@@ -1,8 +1,9 @@
 name: Share data between jobs
 
-on: [push]
-pull_request:
-workflow_dispatch:
+on: 
+  push:
+  pull_request:
+  workflow_dispatch:
 jobs:
   job_1:
     name: Add 3 and 7
