@@ -15,7 +15,12 @@ jobs:
         with:
           name: homework
           path: math-homework.txt
-      - name: commmit files
+      - name: git
         run: |
-          git commit -m "added file" -a
-          git push
+          # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
+          git --version
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git status
+          git tag
+          git describe
