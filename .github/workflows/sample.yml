@@ -24,6 +24,6 @@ jobs:
           git fetch origin
           git checkout main
 
-      - name: Copy folder to source branch
+      - name: Copy folder to source branches
         run: |
           git checkout fa-v2 test.txt
