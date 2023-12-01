@@ -22,8 +22,8 @@ jobs:
       - name: Switch to target branch
         run: |
           git fetch origin
-          git checkout ${{ github.event.pull_request.base.ref }}
+          git checkout main
 
       - name: Copy folder to source branch
         run: |
-          git checkout -b fa-v2 -- test.txt
+          git checkout fa-v2 test.txt
