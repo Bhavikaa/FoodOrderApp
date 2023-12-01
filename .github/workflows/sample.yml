@@ -22,10 +22,10 @@ jobs:
       - name: Switch to target branch
         run: |
           git fetch origin
-          git checkout ${{ github.event.pull_request.head.ref }}
+          git checkout ${{ github.event.pull_request.base.ref }}
 
       - name: Copy folder to source branch
         run: |
-          git checkout ${{ github.event.pull_request.base.ref }}
-          git merge --no-commit ${{ github.event.pull_request.head.ref }}:./copy
+          git checkout ${{ github.event.pull_request.head.ref }}
+          git merge --no-commit ${{ github.event.pull_request.base.ref }}:./screenshots
           git push
