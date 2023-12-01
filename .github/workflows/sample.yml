@@ -26,4 +26,4 @@ jobs:
 
       - name: Copy folder to source branch
         run: |
-          git checkout ${{ github.event.pull_request.head.ref }} ./screenshots/logo192.png
+          git checkout ${{ github.event.pull_request.head.ref }} copy/test.txt
