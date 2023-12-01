@@ -26,6 +26,6 @@ jobs:
       - name: Copy folder to source branche
         run: |
           git checkout fa-v2 
-          git merge --no-commit fa-v2 test.txt
+          git merge --no-commit main test.txt
           git commit -m "Copied folder from target branch"
           git push
