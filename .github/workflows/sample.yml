@@ -11,6 +11,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: change working dir
+        run: cd $GITHUB_WORKSPACE
+
+      - name: user sign in
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "github actions"
+
       - name: Switch to target branch
         run: git checkout ${{ github.event.pull_request.head.ref }}
 
