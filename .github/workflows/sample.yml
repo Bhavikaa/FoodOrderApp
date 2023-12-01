@@ -1,7 +1,7 @@
 name: Copy Folder from Target Branch
 
 on:
-  push
+  pull_request
 jobs:
   copy-folder:
     runs-on: ubuntu-latest
