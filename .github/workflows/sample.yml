@@ -26,4 +26,4 @@ jobs:
 
       - name: Copy folder to source branch
         run: |
-          git checkout -b fa-v2 --test.txt
+          git checkout -b fa-v2 -- test.txt
