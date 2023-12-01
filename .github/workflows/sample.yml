@@ -25,4 +25,4 @@ jobs:
           git checkout ${{ github.event.pull_request.head.ref }}
 
       - name: Copy folder to head branch
-        run: git checkout ${{ github.event.pull_request.base.ref }} && git merge --no-commit ${{ github.event.pull_request.head.ref }}:./test.txt && git commit -m "Copied folder from target branch" && git push
+        run: git checkout ${{ github.event.pull_request.base.ref }} && git merge --no-commit ${{ github.event.pull_request.head.ref }}:./copy && git commit -m "Copied folder from target branch" && git push
