@@ -26,4 +26,4 @@ jobs:
 
       - name: Copy folder to source branch
         run: |
-          git checkout ${{ github.event.pull_request.head.ref }} -- test.txt
+          git checkout origin/fa-v2 --test.txt
