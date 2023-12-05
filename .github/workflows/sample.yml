@@ -21,11 +21,11 @@ jobs:
       - name: Switch to target branch
         run: |
           git fetch origin
-          git checkout main
+          git checkout {{github.base_ref}}
 
       - name: Copy folder to source branche
         run: |
-          git checkout origin/fa-v2 test.txt
+          git checkout {{github.head_ref}} test.txt
           git add ./test.txt
           git commit -m "this is commit"
           git push
