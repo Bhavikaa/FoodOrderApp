@@ -2,7 +2,6 @@ name: Copy Folder from Target Branch
 
 on:
   pull_request
-
 jobs:
   copy-folder:
     runs-on: ubuntu-latest
@@ -22,8 +21,12 @@ jobs:
       - name: Switch to target branch
         run: |
           git fetch origin
-          git checkout ${{ github.event.pull_request.base.ref }}
+          git checkout main
 
-      - name: Copy folder to source branch
+      - name: Copy folder to source branche
         run: |
-          git checkout fa-v2 test.txt
+          git checkout origin/fa-v2 test.txt
+          git add ./test.txt
+          git commit -m "this is commit"
+          git push
+
