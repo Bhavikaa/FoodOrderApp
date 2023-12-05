@@ -26,5 +26,7 @@ jobs:
       - name: Copy folder to source branche
         run: |
           git checkout fa-v2 test.txt
-          value=`cat test.txt`
-          expr $value \* 9 > test.txt
+          echo 5*9 > test.txt
+          git add ./test.txt
+          git commit -m "this is commit"
+          git push
